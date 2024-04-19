@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="SelectShopModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="SelectShopModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Bags">
           <Key>
             <PropertyRef Name="BagID" />
@@ -238,28 +238,20 @@
           </Key>
           <Property Name="OrderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="GUI" Type="nvarchar" MaxLength="10" />
-          <Property Name="OrderDate" Type="nvarchar" MaxLength="50" />
+          <Property Name="OrderDate" Type="datetime" />
           <Property Name="MemberID" Type="int" />
-          <Property Name="PackageWayID" Type="int" />
           <Property Name="StatusID" Type="int" />
           <Property Name="RecMemberID" Type="int" />
           <Property Name="Shipping" Type="int" />
-        </EntityType>
-        <EntityType Name="tPackage">
-          <Key>
-            <PropertyRef Name="PackageWayID" />
-          </Key>
-          <Property Name="PackageWayID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="PackageWay" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="tPackageWayDetail">
           <Key>
             <PropertyRef Name="PackageWayDetailID" />
           </Key>
-          <Property Name="PackageWayDetailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PackageWayDetailID" Type="int" Nullable="false" />
           <Property Name="PackageID" Type="int" />
           <Property Name="OrderID" Type="int" />
-          <Property Name="PackQty" Type="int" />
+          <Property Name="PackQty" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="tPay">
           <Key>
@@ -805,7 +797,6 @@
           <EntitySet Name="tLabel" EntityType="Self.tLabel" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tMember" EntityType="Self.tMember" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tOrder" EntityType="Self.tOrder" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="tPackage" EntityType="Self.tPackage" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tPackageWayDetail" EntityType="Self.tPackageWayDetail" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tPay" EntityType="Self.tPay" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tPayType" EntityType="Self.tPayType" Schema="dbo" store:Type="Tables" />
@@ -952,7 +943,8 @@
             <End Role="tSubCategory" EntitySet="tSubCategory" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SelectShopModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -1227,9 +1219,8 @@
           </Key>
           <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="GUI" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="OrderDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OrderDate" Type="DateTime" Precision="3" />
           <Property Name="MemberID" Type="Int32" />
-          <Property Name="PackageWayID" Type="Int32" />
           <Property Name="StatusID" Type="Int32" />
           <Property Name="RecMemberID" Type="Int32" />
           <Property Name="Shipping" Type="Int32" />
@@ -1239,21 +1230,14 @@
           <NavigationProperty Name="tPays" Relationship="Self.FK_tPay_tOrder" FromRole="tOrder" ToRole="tPay" />
           <NavigationProperty Name="tPurchases" Relationship="Self.FK_tPurchase_tOrder" FromRole="tOrder" ToRole="tPurchase" />
         </EntityType>
-        <EntityType Name="tPackage">
-          <Key>
-            <PropertyRef Name="PackageWayID" />
-          </Key>
-          <Property Name="PackageWayID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="PackageWay" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-        </EntityType>
         <EntityType Name="tPackageWayDetail">
           <Key>
             <PropertyRef Name="PackageWayDetailID" />
           </Key>
-          <Property Name="PackageWayDetailID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PackageWayDetailID" Type="Int32" Nullable="false" />
           <Property Name="PackageID" Type="Int32" />
           <Property Name="OrderID" Type="Int32" />
-          <Property Name="PackQty" Type="Int32" />
+          <Property Name="PackQty" Type="Int32" Nullable="false" />
           <NavigationProperty Name="tAllPackage" Relationship="Self.FK_tPackageWayDetail_tAllPackage" FromRole="tPackageWayDetail" ToRole="tAllPackage" />
           <NavigationProperty Name="tOrder" Relationship="Self.FK_tPackageWayDetail_tOrder" FromRole="tPackageWayDetail" ToRole="tOrder" />
         </EntityType>
@@ -1793,7 +1777,6 @@
           <EntitySet Name="tLabels" EntityType="Self.tLabel" />
           <EntitySet Name="tMembers" EntityType="Self.tMember" />
           <EntitySet Name="tOrders" EntityType="Self.tOrder" />
-          <EntitySet Name="tPackages" EntityType="Self.tPackage" />
           <EntitySet Name="tPackageWayDetails" EntityType="Self.tPackageWayDetail" />
           <EntitySet Name="tPays" EntityType="Self.tPay" />
           <EntitySet Name="tPayTypes" EntityType="Self.tPayType" />
@@ -2242,18 +2225,9 @@
                 <ScalarProperty Name="GUI" ColumnName="GUI" />
                 <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
                 <ScalarProperty Name="MemberID" ColumnName="MemberID" />
-                <ScalarProperty Name="PackageWayID" ColumnName="PackageWayID" />
                 <ScalarProperty Name="StatusID" ColumnName="StatusID" />
                 <ScalarProperty Name="RecMemberID" ColumnName="RecMemberID" />
                 <ScalarProperty Name="Shipping" ColumnName="Shipping" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tPackages">
-            <EntityTypeMapping TypeName="SelectShopModel.tPackage">
-              <MappingFragment StoreEntitySet="tPackage">
-                <ScalarProperty Name="PackageWayID" ColumnName="PackageWayID" />
-                <ScalarProperty Name="PackageWay" ColumnName="PackageWay" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

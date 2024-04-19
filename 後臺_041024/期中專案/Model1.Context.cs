@@ -49,7 +49,6 @@ namespace 期中專案
         public virtual DbSet<tLabel> tLabels { get; set; }
         public virtual DbSet<tMember> tMembers { get; set; }
         public virtual DbSet<tOrder> tOrders { get; set; }
-        public virtual DbSet<tPackage> tPackages { get; set; }
         public virtual DbSet<tPackageWayDetail> tPackageWayDetails { get; set; }
         public virtual DbSet<tPay> tPays { get; set; }
         public virtual DbSet<tPayType> tPayTypes { get; set; }

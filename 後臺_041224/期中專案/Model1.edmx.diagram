@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bee73d0f6fa24673917b38114b9515d3" Name="Diagram1">
+        <EntityTypeShape EntityType="SelectShopModel.Bag" Width="1.5" PointX="17.25" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.Box" Width="1.5" PointX="20.25" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.Card" Width="1.5" PointX="17.25" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.GiftPackageStyle" Width="1.5" PointX="15" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.MaterialColor" Width="1.5" PointX="12.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.packageMaterial" Width="1.5" PointX="15" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.sysdiagram" Width="1.5" PointX="10.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.tActive" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.tAgency" Width="1.5" PointX="7.5" PointY="27.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.tAllPackage" Width="1.5" PointX="17.25" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.tAppraisal" Width="1.5" PointX="8.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.tCart" Width="1.5" PointX="7.5" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.tCategory" Width="1.5" PointX="0.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.tDepartment" Width="1.5" PointX="11.75" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.tDistributor" Width="1.5" PointX="7.5" PointY="30.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.tEmployee" Width="1.5" PointX="14" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.tEnterprise" Width="1.5" PointX="5.25" PointY="27.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.tEventLog" Width="1.5" PointX="16.25" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.tKeyword" Width="1.5" PointX="7.5" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.tLabel" Width="1.5" PointX="7.5" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.tMember" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.tOrder" Width="1.5" PointX="8.25" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.tOrder_temp" Width="1.5" PointX="0.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.tPackageWayDetail" Width="1.5" PointX="19.5" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.tPay" Width="1.5" PointX="3" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.tPayType" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.tProduct" Width="1.5" PointX="5.25" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.tPurchase" Width="1.5" PointX="10.5" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.tReview" Width="1.5" PointX="10.5" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.tSale" Width="1.5" PointX="9.75" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.tStatu" Width="1.5" PointX="6" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.tSubCategory" Width="1.5" PointX="3" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SelectShopModel.tProdAppearance" Width="1.5" PointX="7.5" PointY="24" IsExpanded="true" />
+        <AssociationConnector Association="SelectShopModel.FK_Bags_GiftPackageStyle1" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_Bags_packageMaterial1" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_Boxes_GiftPackageStyle1" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_Boxes_packageMaterial1" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_Cards_GiftPackageStyle1" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_tAllPackage_GiftPackageStyle1" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_packageMaterial_MaterialColor" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_tAllPackage_packageMaterial" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_tProduct_tActive" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_tAgency_tEnterprise" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_tSales_tAgency" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_tPackageWayDetail_tAllPackage" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_tReview_tAppraisal" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_tCart_tMember" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_tCart_tProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_tSubCategory_tCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_tEmployee_Department" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_tDistributor_tEnterprise" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_tSales_tDistributor" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_EventLog_tEmployee" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_tKeyword_tProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_tLabel_tProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_tSales_tLabel" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_tOrder_tMember" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_tReview_tMember" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_tOrder_tStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_tPackageWayDetail_tOrder" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_tPurchase_tOrder" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_tPay_tPayType" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_tProdAppearance_tProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_tProduct_tSubCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_tPurchase_tProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="SelectShopModel.FK_tReview_tProduct" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

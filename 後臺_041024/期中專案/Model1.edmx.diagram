@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9650e92281ab47338e287260125eee0d" Name="Diagram1">
+      <Diagram DiagramId="24523bf0740d4eda8426a90319b0b5d2" Name="Diagram1">
         <EntityTypeShape EntityType="SelectShopModel.Bag" Width="1.5" PointX="16.25" PointY="15.125" IsExpanded="true" />
         <EntityTypeShape EntityType="SelectShopModel.Box" Width="1.5" PointX="19.25" PointY="15.125" IsExpanded="true" />
         <EntityTypeShape EntityType="SelectShopModel.Card" Width="1.5" PointX="16.25" PointY="7.375" IsExpanded="true" />
@@ -27,7 +27,6 @@
         <EntityTypeShape EntityType="SelectShopModel.tLabel" Width="1.5" PointX="7.5" PointY="11" IsExpanded="true" />
         <EntityTypeShape EntityType="SelectShopModel.tMember" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SelectShopModel.tOrder" Width="1.5" PointX="8.25" PointY="14.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="SelectShopModel.tPackage" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SelectShopModel.tPackageWayDetail" Width="1.5" PointX="18.5" PointY="11.625" IsExpanded="true" />
         <EntityTypeShape EntityType="SelectShopModel.tPay" Width="1.5" PointX="10.5" PointY="18.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SelectShopModel.tPayType" Width="1.5" PointX="8.25" PointY="26.5" IsExpanded="true" />

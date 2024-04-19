@@ -17,7 +17,7 @@ namespace 期中專案
         public int PackageWayDetailID { get; set; }
         public Nullable<int> PackageID { get; set; }
         public Nullable<int> OrderID { get; set; }
-        public Nullable<int> PackQty { get; set; }
+        public int PackQty { get; set; }
     
         public virtual tAllPackage tAllPackage { get; set; }
         public virtual tOrder tOrder { get; set; }

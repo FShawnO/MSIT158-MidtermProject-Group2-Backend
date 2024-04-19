@@ -24,9 +24,8 @@ namespace 期中專案
     
         public int OrderID { get; set; }
         public string GUI { get; set; }
-        public string OrderDate { get; set; }
+        public Nullable<System.DateTime> OrderDate { get; set; }
         public Nullable<int> MemberID { get; set; }
-        public Nullable<int> PackageWayID { get; set; }
         public Nullable<int> StatusID { get; set; }
         public Nullable<int> RecMemberID { get; set; }
         public Nullable<int> Shipping { get; set; }
